@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Agent Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Voice Agent Assistant</h1>
+            <p class="tagline">Control your Android device with voice commands</p>
+        </header>
+
+        <main>
+            <div class="microphone-container">
+                <button id="microphone-button" class="microphone-button">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div id="voice-visualizer" class="voice-visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div id="status-indicator" class="status-indicator">
+                <span id="status-text">Ready</span>
+                <div id="status-light" class="status-light"></div>
+            </div>
+
+            <div class="command-display">
+                <h2>Voice Command</h2>
+                <div id="command-text" class="command-text">Say something...</div>
+            </div>
+
+            <div class="response-display">
+                <h2>Response</h2>
+                <div id="response-text" class="response-text">Waiting for command...</div>
+            </div>
+
+            <div class="device-status">
+                <h2>Device Status</h2>
+                <div id="device-status-text" class="device-status-text">No device connected</div>
+            </div>
+        </main>
+
+        <section class="command-list">
+            <h2>Available Commands</h2>
+            <ul id="available-commands">
+                <li><strong>open camera</strong> - Opens the camera app</li>
+                <li><strong>take screenshot</strong> - Captures a screenshot</li>
+                <li><strong>open messages</strong> - Opens the messaging app</li>
+                <li><strong>call [contact]</strong> - Initiates a call to specified contact</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>JADE Agent Platform + Web Speech API + ADB</p>
+            <p class="connection-status">
+                Server Status: <span id="connection-status">Disconnected</span>
+            </p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
