@@ -1,0 +1,47 @@
+{
+  "name": "voice-agent-cli",
+  "version": "0.1.0",
+  "description": "CLI tool for Voice Agent Assistant",
+  "main": "bin/voice-agent.js",
+  "bin": {
+    "voice-agent": "bin/voice-agent.js"
+  },
+  "scripts": {
+    "start": "node bin/voice-agent.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "chmod +x bin/voice-agent.js"
+  },
+  "keywords": [
+    "voice",
+    "assistant",
+    "cli",
+    "jade",
+    "adb",
+    "android"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "ora": "^5.4.1",
+    "ws": "^8.5.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Agrim-Sigdel/voice-agent-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Agrim-Sigdel/voice-agent-assistant/issues"
+  }
+}
+
